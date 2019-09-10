@@ -1,0 +1,8 @@
+version: '2'
+services:
+  php5.6-nginx-base:
+    build: ./
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - "8888:80"

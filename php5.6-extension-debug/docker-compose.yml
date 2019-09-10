@@ -1,0 +1,12 @@
+version: '2'
+services:
+  php5.6-extension-debug:
+    build: ./
+    volumes:
+      - ./extension:/extension/
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - "8888:80"

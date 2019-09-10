@@ -1,0 +1,15 @@
+version: '2'
+services:
+  php5.6-nginx-mysql:
+    build: ./
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - "8888:80"
+    links:
+      - mysql
+
+  mysql:
+    build: ./mysql/
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
