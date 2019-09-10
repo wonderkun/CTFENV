@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Listen for XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9000,
+            "pathMappings": {
+                "/var/www/html": "${workspaceFolder}/www/babyphoto"
+            },
+            "xdebugSettings": {
+                "max_data": 65535,
+                "show_hidden": 1,
+                "max_children": 100,
+                "max_depth": 5
+            }
+        }
+    ]
+}
