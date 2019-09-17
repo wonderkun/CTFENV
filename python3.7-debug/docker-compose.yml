@@ -1,0 +1,10 @@
+version: '2'
+services:
+  python3.7-debug:
+    build: ./
+    volumes:
+      - ./Debug:/Debug
+    ports:
+      - 3000:3000
+
+
