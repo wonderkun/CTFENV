@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "start": "node --inspect-brk=0.0.0.0:9229 ./www/index.js"
+    }
+}

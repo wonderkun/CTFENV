@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+    nodejs-debug:
+        build: ./
+        volumes: 
+            - ./www:/usr/src/app/www
+        ports:
+            - "9229:9229"
