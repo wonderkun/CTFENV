@@ -1,0 +1,16 @@
+version: '2.4'
+services:
+  libphp-debug:
+    build:
+      context: ./
+      args:
+        PROXY: "socks5://172.17.0.1:1080"
+        BRANCH: "master"
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - "8888:80"
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
